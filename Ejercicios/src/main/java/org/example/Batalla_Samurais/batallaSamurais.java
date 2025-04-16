@@ -28,23 +28,32 @@ public class batallaSamurais {
                 String[] partes = linea.trim().split(" ");
 
                 if (partes.length != 7) {
-                    throw new Exception("ERROR. Debes introducir exactamente 7 números.");
+                    System.out.println("ERROR. Debes introducir exactamente 7 números.");
+                    continue;
                 }
 
                 int suma = 0;
+                boolean valoresInvalidos = false;
 
                 for (int i = 0; i < 7; i++) {
                     equipo[i] = Integer.parseInt(partes[i]);
 
                     if (equipo[i] < 1 || equipo[i] > 24) {
-                        throw new Exception("ERROR. La potencia debe estar entre 1 y 24.");
+                        System.out.println("ERROR. La potencia debe estar entre 1 y 24.");
+                        valoresInvalidos = true;
+                        break;
                     }
 
                     suma += equipo[i];
                 }
 
+                if (valoresInvalidos) {
+                    continue;
+                }
+
                 if (suma != 30) {
-                    throw new Exception("ERROR. La potencia total no suma 30.");
+                    System.out.println("ERROR. La potencia total no suma 30.");
+                    continue;
                 }
 
                 System.out.println("Equipo completado.");
@@ -62,7 +71,7 @@ public class batallaSamurais {
 
     public static void batalla(int[] equipo1, int[] equipo2) {
         Random rand = new Random();
-        int inicio = rand.nextInt(7); // de 0 a 6
+        int inicio = rand.nextInt(7);
         System.out.println("La batalla inicia con el Samurai " + (inicio + 1) + ".");
 
         int bajas1 = 0;
@@ -95,18 +104,26 @@ public class batallaSamurais {
                 System.out.println("Empate. Mueren ambos. " + p1 + " vs " + p2);
             }
 
-            if (bajas1 >= 4) {
+            if (bajas1 >= 4 && bajas2 >= 4) {
+                System.out.println("¡EMPATE! Ambos equipos han tenido 4 o más bajas al mismo tiempo.");
+                return;
+            } else if (bajas1 >= 4) {
                 System.out.println("¡Equipo 2 GANA! Equipo 1 ha tenido " + bajas1 + " bajas.");
                 return;
             } else if (bajas2 >= 4) {
                 System.out.println("¡Equipo 1 GANA! Equipo 2 ha tenido " + bajas2 + " bajas.");
                 return;
-            } else if (bajas1 == bajas2) {
-                
             }
         }
 
-        System.out.println("La batalla ha terminado en empate. Ningún equipo ha ganado.");
+        if (bajas1 > bajas2) {
+            System.out.println("¡Equipo 2 GANA! Equipo 1 ha tenido " + bajas1 + " bajas contra " + bajas2 + " del Equipo 2.");
+        } else if (bajas2 > bajas1) {
+            System.out.println("¡Equipo 1 GANA! Equipo 2 ha tenido " + bajas2 + " bajas contra " + bajas1 + " del Equipo 1.");
+        } else {
+            System.out.println("¡EMPATE! Ambos equipos terminaron con " + bajas1 + " bajas.");
+        }
     }
+
 
 }

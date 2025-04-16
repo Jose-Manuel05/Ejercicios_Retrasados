@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6d1e82-f08d-4d75-9436-b86cf0eff955" name="Changes" comment="" />
+    <list default="true" id="6a6d1e82-f08d-4d75-9436-b86cf0eff955" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/AccionesDeportivas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/Acompañante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/AppMantenimiento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/AppMutxamenFC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/Diagrama.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/DorsalDuplicadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/Entrenador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/Equipos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/FormacionInvalidaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/FuncionesIntegrantes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/Jugador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/Masajista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/MutxamelFC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Copa_Rey/Posiciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Formiguero_Rebelion/AppProgramas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Formiguero_Rebelion/Cadena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Formiguero_Rebelion/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Formiguero_Rebelion/Invitado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Formiguero_Rebelion/Programa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Librerias_Lombok/Curso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Librerias_Lombok/Estudiante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Librerias_Lombok/Instituto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Librerias_Lombok/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Sopa_Letras/sopaLetras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batalla_Samurais/batallaSamurais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batalla_Samurais/batallaSamurais.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +41,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
+        <option value="UML Sequence" />
       </list>
     </option>
   </component>
@@ -31,17 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.batallaSamurais.executor&quot;: &quot;Run&quot;,
-    &quot;Application.numeroSuerte.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/josem/Documents/Programacion/Ejercicios_Retrasados/Ejercicios/src/main/java/org/example/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AppMantenimiento.executor": "Run",
+    "Application.AppMutxamenFC.executor": "Run",
+    "Application.AppProgramas.executor": "Run",
+    "Application.batallaSamurais.executor": "Run",
+    "Application.main.executor": "Run",
+    "Application.numeroSuerte.executor": "Run",
+    "Application.sopaLetras.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/josem/Documents/Programacion/Estructuras_Datos",
+    "onboarding.tips.debug.path": "C:/Users/josem/Documents/Programacion/Ejercicios_Retrasados/Ejercicios/src/main/java/org/example/Main.java"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

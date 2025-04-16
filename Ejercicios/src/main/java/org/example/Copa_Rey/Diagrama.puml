@@ -1,0 +1,119 @@
+@startuml MutxamelFC
+
+' Interfaces
+interface FuncionesIntegrantes {
+  +concentrarse(): void
+  +viajar(ciudad: String): void
+  +celebrarGol(): void
+}
+
+interface AccionesDeportivas {
+  +entrenar(): void
+  +jugarPartido(rival: String): void
+}
+
+' Abstract class
+abstract class MutxamelFC {
+  -nombre: String
+  -edad: int
+  +MutxamelFC(nombre: String, edad: int)
+  +getNombre(): String
+  +getEdad(): int
+  +setNombre(nombre: String): void
+  +setEdad(edad: int): void
+}
+
+' Classes
+class Jugador {
+  -static jugadoresRegistrados: List<Jugador>
+  -categoria: Equipos
+  -dorsal: int
+  -posicion: Posiciones
+  +Jugador(nombre: String, edad: int, categoria: Equipos, dorsal: int, posicion: Posiciones)
+  +setDorsal(dorsal: int): void
+  +setCategoria(categoria: Equipos): void
+  -validarDorsal(dorsal: int, categoria: Equipos): void
+  +calentar(): void
+  +descansar(): void
+  +marcarGol(): void
+}
+
+class Entrenador {
+  -equipo: Equipos
+  -formacionPreferida: String
+  +Entrenador(nombre: String, edad: int, equipo: Equipos, formacionPreferida: String)
+  +setFormacionPreferida(formacionPreferida: String): void
+  +palnificarEntrenamiento(): void
+  +hacerCambios(): void
+}
+
+class Masajista {
+  -titulacion: String
+  -anosExperiencia: int
+  +Masajista(nombre: String, edad: int, anosExperiencia: int, titulacion: String)
+  +darMasaje(jugador: Jugador): void
+}
+
+class Acompañante {
+  -integrante: Jugador
+  -parentesco: String
+  +Acompañante(nombre: String, edad: int, integrante: Jugador, parentesco: String)
+}
+
+' Enums
+enum Equipos {
+  BENJAMIN
+  ALEVIN
+  INFALTIL
+  CADETE
+  JUVENIL
+  SENIOR
+}
+
+enum Posiciones {
+  PORTERO
+  DEFENSA
+  CENTROCAMPISTA
+  DELANTERO
+}
+
+' Applications
+class AppMutxamenFC {
+  +main(args: String[]): void
+}
+
+class AppMantenimiento {
+  -static sc: Scanner
+  -static jugadores: List<Jugador>
+  +main(args: String[]): void
+  +static mostrarMenuJugadores(): void
+  -static añadirJugador(): void
+  -static modificarJugador(): void
+  -static crearAcompañantes(): void
+  -static listarJugadores(): void
+  -static mantenimientoEntrenadores(): void
+  -static mantenimientoMasajistas(): void
+  -static mantenimientoAcompanantes(): void
+}
+
+' Relationships
+MutxamelFC ..|> FuncionesIntegrantes
+Jugador --|> MutxamelFC
+Jugador ..|> AccionesDeportivas
+Entrenador --|> MutxamelFC
+Entrenador ..|> AccionesDeportivas
+Masajista --|> MutxamelFC
+Acompañante --|> MutxamelFC
+
+Jugador --> Equipos
+Jugador --> Posiciones
+Entrenador --> Equipos
+Acompañante --> Jugador
+
+AppMantenimiento --> Jugador
+AppMutxamenFC --> Jugador
+AppMutxamenFC --> Entrenador
+AppMutxamenFC --> Masajista
+AppMutxamenFC --> Acompañante
+
+@enduml
